@@ -66,6 +66,7 @@ While others have free time but no way to monetize it. Existing platforms cannot
 ### 2. Operational Logic
 * **Binary Dispute Resolution:** The system currently assumes that if the OTP is shared, the task is successfully completed. We lack a **"Conflict Resolution Center"** for edge cases (e.g., "The Hero brought the wrong food item").
 * **Open-Access Sandbox (Verification):** While the Sign-Up UI *advises* users to enter an institutional email (showing `student@college.edu` as a placeholder), the backend validation is currently **permissive**. (We allow `@gmail.com` signups also) So that judges and hackathon testers can easily access the platform without needing a fake university ID.(No verification is there in the backend).
+* **Button Sensitivity:** Currently, we haven't added "Debouncing" (a delay to stop rapid clicks). So, if a user spams the "Post" button, it might create duplicate tasks. This will be fixed in the production version.
 
 ## Features for Round 2
 
@@ -74,6 +75,9 @@ While others have free time but no way to monetize it. Existing platforms cannot
 * **Instant Revocation:** Mistake in the description? Changed your mind? Task Masters will be able to cancel an `OPEN` quest instantly and get a 100% wallet refund as long as no Hero has accepted it yet.
 ### 2. Upgrade for Community Justice
 * **Dispute Resolution Center:** A dedicated dashboard where users can upload proof (photos/chats) in case of a conflict. A "Jury System" (admins) will have access to review and resolve these edge cases.
+### 3. Scaling & Performance
+* **Preventing Double Posts:** Sometimes, if the internet is slow, a user might click the "Post" button twice. We will add **"Idempotency Keys"** (unique IDs) so the server knows to ignore the second click and create only one task.
+* **Handling Simultaneous Clicks:** If two Heroes click "Accept" at the exact same millisecond, there is a risk of a **Race Condition**. We will implement better database locking to ensure only the first request wins, while the second user gets a polite "Quest already taken" message.
 
 
 ---
