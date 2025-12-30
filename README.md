@@ -15,7 +15,8 @@ While others have free time but no way to monetize it. Existing platforms cannot
 
 ###  The Gamified Experience
 * **Gamified Quest System:** Tasks aren't just chores; they are *"Quests"* with specific bounties, deadlines, and urgency levels (Low/Medium/Urgent).
-* **Hero Feed:** A real-time marketplace where students can find and accept quests based on location and reward to become the campus *"Hero"*.
+* **Real-Time Hero Feed:** A real-time marketplace where students can find and accept quests based on location and reward to become the campus *"Hero"*.
+* **Smart Quest Search & Sorting:** Heros don't just scroll blindly. They can **Filter** by **"Urgent"** to help fast or by **"High Pay"** to maximize their earnings or can sort by like **"Newest First"**. Heros can also manually search by typing for a specific task or location.
 * **Legendary Dashboard:** Users track their journey with total earnings, completion stats, and a level-based XP system.
 * **Rating System:** After the task is done, the Task Master rates the Hero out of 5 stars. This helps trustworthy *Heros* build a strong profile. In the future, this "Trust Score" will let Task Masters pick the best person for the job instead of just the first one.
 
